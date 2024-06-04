@@ -5,13 +5,22 @@
   "repository": "https://github.com/santoriggio/specio.git",
   "author": "Santo <info@santoriggio.it>",
   "license": "MIT",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint \"**/*.{js,ts,tsx}\"",
+    "clean": "del-cli lib",
+    "release": "release-it"
+  },
   "devDependencies": {
     "@commitlint/cli": "^19.3.0",
     "@commitlint/config-conventional": "^19.2.2",
     "@evilmartians/lefthook": "^1.5.0",
+    "@release-it/conventional-changelog": "^8.0.1",
     "@types/node": "^20.14.1",
     "commitlint": "^19.3.0",
+    "del-cli": "^5.1.0",
     "eslint": "^9.4.0",
+    "release-it": "^17.3.0",
     "typescript": "^5.4.5"
   },
   "commitlint": {
@@ -42,6 +51,23 @@
     "node_modules/",
     "lib/"
   ],
+  "release-it": {
+    "git": {
+      "commitMessage": "chore: release ${version}",
+      "tagName": "v${version}"
+    },
+    "npm": {
+      "publish": true
+    },
+    "github": {
+      "release": true
+    },
+    "plugins": {
+      "@release-it/conventional-changelog": {
+        "preset": "angular"
+      }
+    }
+  },
   "prettier": {
     "quoteProps": "consistent",
     "singleQuote": false,
