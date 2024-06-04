@@ -9,6 +9,7 @@
     "typecheck": "tsc --noEmit",
     "lint": "eslint \"**/*.{js,ts,tsx}\"",
     "clean": "del-cli lib",
+    "build": "tsc",
     "release": "release-it"
   },
   "devDependencies": {
@@ -19,7 +20,10 @@
     "@types/node": "^20.14.1",
     "commitlint": "^19.3.0",
     "del-cli": "^5.1.0",
-    "eslint": "^9.4.0",
+    "eslint": "^8.51.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.1",
+    "prettier": "^3.3.0",
     "release-it": "^17.3.0",
     "typescript": "^5.4.5"
   },
@@ -28,29 +32,11 @@
       "@commitlint/config-conventional"
     ]
   },
-  "eslintConfig": {
-    "root": true,
-    "extends": [
-      "@react-native",
-      "prettier"
-    ],
-    "rules": {
-      "prettier/prettier": [
-        "error",
-        {
-          "quoteProps": "consistent",
-          "singleQuote": false,
-          "tabWidth": 2,
-          "trailingComma": "es5",
-          "useTabs": false
-        }
-      ]
-    }
-  },
   "eslintIgnore": [
     "node_modules/",
     "lib/"
   ],
+  "packageManager": "yarn@3.6.1",
   "release-it": {
     "git": {
       "commitMessage": "chore: release ${version}",
@@ -68,6 +54,15 @@
       }
     }
   },
+  "eslintConfig": {
+    "extends": [
+      "prettier"
+    ]
+  },
+  "eslintIgnore": [
+    "node_modules/",
+    "lib/"
+  ],
   "prettier": {
     "quoteProps": "consistent",
     "singleQuote": false,
