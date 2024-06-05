@@ -1,9 +1,10 @@
 {
   "name": "specio",
   "version": "1.0.0",
-  "main": "lib/commonjs/index",
-  "module": "lib/module/index",
-  "type": "module",
+  "main": "lib/commonjs/index.js",
+  "module": "lib/module/index.js",
+  "commonjs": "lib/commonjs/index.js",
+  "types": "lib/typescript/index.d.ts",
   "repository": "https://github.com/santoriggio/specio.git",
   "author": "Santo <info@santoriggio.it>",
   "license": "MIT",
