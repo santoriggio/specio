@@ -12,4 +12,3 @@ commit-msg:
   commands:
     commitlint:
       run: npx commitlint --edit
-
