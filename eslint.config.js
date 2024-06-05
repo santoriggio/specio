@@ -1,5 +1,5 @@
 export default [
   {
-    ignores: ["node_modules/", "lib/"],
+    ignores: ["node_modules/", "lib/", "example/"],
   },
 ];
