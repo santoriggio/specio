@@ -11,11 +11,15 @@
   "scripts": {
     "typecheck": "tsc --noEmit",
     "lint": "eslint \"**/*.{js,ts,tsx}\"",
+    "pre-commit": "yarn typecheck && yarn lint",
     "clean": "del-cli lib",
     "build:cjs": "tsc --project tsconfig.cjs.json",
     "build:esm": "tsc --project tsconfig.esm.json",
     "build": "yarn build:cjs && yarn build:esm",
     "release": "release-it"
+  },
+  "bin": {
+    "specio": "./index.js"
   },
   "devDependencies": {
     "@babel/core": "^7.24.6",

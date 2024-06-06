@@ -5,7 +5,11 @@
   "license": "MIT",
   "type": "module",
   "dependencies": {
-    "specio": "link:../"
+    "specio": "file:.."
+  },
+  "scripts": {
+    "test": "specio"
   },
   "private": true
 }
+
