@@ -5,5 +5,5 @@ it("funzione di test", () => {
   const result = sum(2, 3);
   expect(result).toBe(5);
 
-  expect(result).toBe(5);
+  expect(result).toBe(3);
 });
