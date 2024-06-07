@@ -1,0 +1,8 @@
+node_modules/
+example/
+src/
+lefthook.yml
+eslint.config.js
+prettier.config.js
+tsconfig.cjs.json
+tsconfig.mjs.json
